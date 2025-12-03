@@ -43,6 +43,7 @@ int main () {
     cin >> size;
 
     Customer array[size];
+    int total_age = 0;
 
     for (int i = 0; i < size; i++) {
 
@@ -55,6 +56,7 @@ int main () {
 
         cout << "Enter Customer's Age : ";
         cin >> age;
+        total_age += age;
 
         cin.ignore();
         cout << "Enter Customer's City : ";
@@ -78,6 +80,9 @@ int main () {
         array[i].getCustomerData();
         cout << "-----------------------------------------------------------" << endl;
     }
+
+    float average_age = (float)total_age / size;
+    cout << "Average age of customers = " << average_age << endl;
 
     return 0;
 }
