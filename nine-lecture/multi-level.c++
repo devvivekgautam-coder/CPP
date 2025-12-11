@@ -24,7 +24,7 @@ class R : public Q{
         }
 
         void getData() {
-            cout << "Converter For Celsius." << temperature << endl;
+            cout << "Converter For Celsius : " << temperature << endl;
             cout << "Temperature In fahrenheit : " << fahrenheit << endl;
             cout << "Temperature In Kelvin : " << kelvin << endl;
         }
