@@ -2,35 +2,37 @@
 using namespace std;
 
 class Cricket {
-    public:
-        void getTotalOvers() {
-            cout << "Total Overs (One Day) : 50" << endl;
-        }
+public:
+    virtual void getTotalOvers() {
+        cout << "Cricket Match Overs" << endl;
+    }
 };
 
 class T20Match : public Cricket {
-    public:
-        void getTotalOvers() {
-            cout << "Total Overs (T20) : 20" << endl;
-        }
+public:
+    void getTotalOvers() {
+        cout << "Total Overs in T20 Match : 20 Overs" << endl;
+    }
 };
 
-class TestMatch : public T20Match {
-    public:
-        void getTotalOvers() {
-            cout << "Total Overs (Test) : Per Day 90 For 5 Days" << endl;
-        }
+class TestMatch : public Cricket {
+public:
+    void getTotalOvers() {
+        cout << "Total Overs in Test Match : 90 Overs per day for 5 days" << endl;
+    }
 };
 
-int main () {
-    TestMatch test1;
-    test1.getTotalOvers();
+int main() {
+    Cricket *c;
 
     T20Match t20;
-    t20.getTotalOvers();
+    TestMatch test;
 
-    Cricket c1;
-    c1.getTotalOvers();
+    c = &t20;
+    c->getTotalOvers();
+
+    c = &test;
+    c->getTotalOvers();
 
     return 0;
 }
