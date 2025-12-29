@@ -25,7 +25,7 @@ class LibraryItem {
 
         }
 
-        string setDueDate(string dueDate) {
+        void setDueDate(string dueDate) {
             this->dueDate = dueDate;
         }
 
