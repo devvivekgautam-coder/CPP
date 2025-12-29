@@ -152,7 +152,7 @@ int main () {
     cin >> choice;
 
     string title, author, dueDate;
-    int idx, quantity;
+    int idx;
 
     cin.ignore();
 
@@ -179,6 +179,7 @@ int main () {
         }
 
         case 2: {
+            int quantity;
             string duration;
 
             cout << "Enter Title Of DVD : ";
@@ -203,7 +204,7 @@ int main () {
         }
 
         case 3: {
-            int issueNumber;
+            int issueNumber,quantity;
 
             cout << "Enter Title Of Magazine : ";
             getline(cin, title);
