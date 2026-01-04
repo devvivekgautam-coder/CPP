@@ -226,5 +226,9 @@ int main () {
 
     } while (choice != 7);
 
+    for (auto item : hospital) {
+        delete item;
+    }
+
     return 0;
 }
